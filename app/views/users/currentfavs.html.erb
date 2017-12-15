@@ -9,9 +9,6 @@
       </div>
     </div>
     <%= render 'relationships/follow_button', user: @user %>
-
-<!--  # fav ボタンを設置をどこに設置するか -->
-
   </aside>
 
   <div class="col-xs-8">
@@ -22,6 +19,6 @@
       <li class="<%= 'active' if current_page?(currentfavs_user_path(@user)) %>"><%= link_to currentfavs_user_path(@user) do %>Favs <span class="badge"><%= @count_currentfavs %></span><% end %></li>
 
     </ul>
-    <%= render 'microposts/microposts', microposts: @microposts %>
+    <%= render 'microposts/microposts', microposts: @currentfavs %>
   </div>
 </div>

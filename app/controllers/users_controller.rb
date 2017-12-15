@@ -39,6 +39,17 @@ class UsersController < ApplicationController
     counts(@user)
   end
 
+
+
+# current favのdef、 page(params[:page])これでいいのか？
+  def currentfavs
+    @user = User.find(params[:id])
+#削除   @user = User.microposts.find(params[:id])
+    @currentfavs = @user.currentfavs.page(params[:page])
+    counts(@user)
+  end
+  
+
   private
 
   def user_params

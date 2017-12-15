@@ -7,6 +7,14 @@
         </div>
         <%= f.submit 'Post', class: 'btn btn-primary btn-block' %>
       <% end %>
+<!-- すべての　favをチェックするボタン-->
+        <br>
+      <div>
+        <button class="btn btn-warning" type="button">
+          <%= 'active' if current_page?(currentfavs_user_path(@user)) %><%= link_to currentfavs_user_path(@user) do %>CheckALLFavs <% end %>
+        </button>
+      </div>
+
     </aside>
     <div class="col-xs-8">
       <%= render 'microposts/microposts', microposts: @microposts %>

@@ -15,5 +15,10 @@ class ApplicationController < ActionController::Base
     @count_microposts = user.microposts.count
     @count_followings = user.followings.count
     @count_followers = user.followers.count
+    
+    @count_currentfavs = user.currentfavs.count
+
+  # 一応favカウントのやつもいれとくか。favしている数をcontroller側で設定して、viewで使う
+
   end
 end

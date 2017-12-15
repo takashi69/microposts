@@ -17,6 +17,12 @@
             <%= link_to "Delete", micropost, method: :delete, data: { confirm: "You sure?" }, class: 'btn btn-danger btn-xs' %>
           <% end %>
         </div>
+        <!--renderで表示をする -->
+        <!--controllerからviewは必ず必要@をけした -->
+          <div>        
+            <%= render 'stocks/fav_button', micropost: micropost %> 
+          </div>
+        
       </div>
     </li>
   <% end %>
